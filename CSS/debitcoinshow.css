@@ -1,0 +1,122 @@
+html {
+    font-size: 26px;
+    background-color: #fdf5e8;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Prociono", serif;
+}
+
+
+
+
+#Logo {
+    display: block;
+    margin: 1rem auto 0px auto;
+    width: 80vw;
+    max-width: 693px;
+}
+
+
+.Section {
+    width: 92vw;
+    max-width: 798px;
+    margin: 0rem auto 3rem auto;
+}
+
+
+.Section_heading {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+
+.Section_paragraph {
+    margin-top: 0.7rem;
+    line-height: 1.4rem;
+    hyphens: auto;
+    font-size: 1rem;
+}
+
+
+.Aflevering {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    text-align: center;
+}
+
+
+#BTCPay {
+    margin-top: 1.4rem;
+    text-align: center;
+}
+
+
+#Meetup_tabel {
+    width: 90%;
+    margin: 1.4rem auto 3rem auto;
+}
+
+
+#Meetup_tabel tr th,td {
+    border: 0.1rem solid #FDE3C0;
+    padding: 0.1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+#Social_media {
+    display: flex;
+    width: 80%;
+    margin: 1.4rem auto 6rem auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+footer {
+    width: 100vw;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0px 0px;
+    background-color: #E69703;
+}
+
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+
+
+@media screen and (max-width:1200px) {
+    
+    html {
+        font-size:calc(1.41vw + 8px);
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    #Social_media {
+        flex-direction: column;
+        width: 100%;
+        margin: 1.4rem auto 4.5rem auto;
+    }
+    
+    #Social_media a {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    
+}
