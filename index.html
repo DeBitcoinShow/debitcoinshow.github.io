@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="nl">
-
-
-    
-    
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -39,12 +35,11 @@
     
     
 <body>
-
+    <p id="env"></p>
+    
 
     <header>
-        
-    <image id="Logo" src="Images/Logo_De_Bitcoin_Show.png"/>
-            
+      <image id="Logo" src="Images/Logo_De_Bitcoin_Show.png"/>
     </header>
     
     
@@ -159,7 +154,16 @@
     
 </body>
 
-    
+<script type='text/javascript' src='JS/jquery-3.4.1.min.js'></script>
+<script type='text/javascript'>
+// Site/local javascript
+if ( window.location.href == "https://debitcoinshow.github.io/" ) {  
+  $("#env").html("GitHub env")
+}
+if ( window.location.href.substring(0,4) == "file" ) {  
+  $("#env").html("Local dev env")
+}
 
+</script>
 
 </html>
