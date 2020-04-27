@@ -83,6 +83,10 @@ html {
     align-items: center;
 }
 
+#Social_media li {
+    list-style: none;
+    margin-top: 0.5em;
+}
 
 footer {
     width: 100vw;
@@ -122,7 +126,6 @@ footer p {
         display: block;
         margin-bottom: 1.5rem;
     }
-    
 }
 
 /* Fork label */
@@ -169,7 +172,4 @@ a:visited{ color:#003cc3 }
 a:hover  { color:#004eff }
 a:active { color:#004eff }
 
-#Social_media li {
-    list-style: none;
-    margin-top: 0.5em;
-}
+
