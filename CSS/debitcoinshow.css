@@ -173,3 +173,7 @@ a:hover  { color:#004eff }
 a:active { color:#004eff }
 
 
+a.hidden {
+  color: black;
+  text-decoration: none;
+}
