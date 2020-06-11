@@ -83,6 +83,7 @@
         <input type="hidden" name="notifyEmail" value="boris@debitcoinshow.nl" />
         <div>
           <div class="btcpay-custom">
+            <input type="text" name="orderId" value="Berichtje">
             <button class="plus-minus" onclick="event.preventDefault(); var price = parseInt(document.querySelector('#btcpay-input-price').value); if ('-' == '-' && (price - 1) < 1) { return; } document.querySelector('#btcpay-input-price').value = parseInt(document.querySelector('#btcpay-input-price').value) - 1;">-</button>
             <input id="btcpay-input-price" name="price" type="text" min="1" max="20" step="1" value="0.0001" style="width: 3em;" oninput="event.preventDefault();isNaN(event.target.value) || event.target.value <= 0 ? document.querySelector('#btcpay-input-price').value = 0.0001 : event.target.value"  />
             <button class="plus-minus" onclick="event.preventDefault(); var price = parseInt(document.querySelector('#btcpay-input-price').value); if ('+' == '-' && (price - 1) < 1) { return; } document.querySelector('#btcpay-input-price').value = parseInt(document.querySelector('#btcpay-input-price').value) + 1;">+</button>
