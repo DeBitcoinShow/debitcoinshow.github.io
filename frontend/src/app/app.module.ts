@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { ContactComponent } from './contact/contact.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
     HomeComponent,
     EventsComponent,
     EpisodesComponent,
-    ContactComponent
+    ContactComponent,
+    SocialmediaComponent
   ],
   imports: [
     BrowserModule,
