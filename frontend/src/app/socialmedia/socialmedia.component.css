@@ -3,4 +3,5 @@ img {
   max-width: 50px;
   max-height: 50px;
   padding: 1px;
+  display: flex;
 }

@@ -7,7 +7,7 @@
 #socialMediaIcons {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 25%;
   z-index: 1000;
 }
 
