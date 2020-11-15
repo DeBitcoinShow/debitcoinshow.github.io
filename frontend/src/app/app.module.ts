@@ -10,6 +10,7 @@ import { EpisodesComponent } from './episodes/episodes.component';
 import { ContactComponent } from './contact/contact.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { FooterComponent } from './footer/footer.component';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   exports: [
     [RouterModule]

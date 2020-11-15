@@ -1,3 +1,8 @@
+#routerOutlet {
+  width: 50%;
+  margin: auto;
+}
+
 #socialMediaIcons {
   position: fixed;
   right: 20px;
@@ -8,4 +13,5 @@
 #footer {
   position: relative;
   text-align: center;
+  padding: 10px;
 }

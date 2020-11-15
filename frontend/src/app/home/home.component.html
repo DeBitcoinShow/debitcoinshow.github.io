@@ -1,1 +1,45 @@
-<p>home works!</p>
+<div id="logo">
+  <img src="/assets/home/debitcoinshow.png" alt="logo not found">
+</div>
+
+<div id="introduction">
+  <h4>
+    Hooggeëerd publiek!
+  </h4>
+  <p>
+    Uw hosts Aaron, Boris en Jan-Willem verwelkomen jullie van harte in de wondere wereld van Bitcoin.
+    Elke week bespreekt dit drietal de nieuwswaardigste twisten, de spectaculairste inzichten en de verborgen details
+    rondom het magische internetgeld.
+  </p>
+  <p>
+    Licht uit, spot aan, dit is De Bitcoin Show!
+  </p>
+</div>
+
+<div id="donate">
+  <h4>
+    Steun De Bitcoin Show met Lightning!
+  </h4>
+  <p>
+    We hebben onze eigen BTCPay Server geinstalleerd om zonder tussenkomst van derden jullie zuur verdiende Satoshi's in
+    ontvangst te nemen. We accepteren voor nu alleen lightning. Kom in de Telegram-groep als je hulp nodig hebt!
+  </p>
+  <p>
+    Dus kun je een paar sats missen? Wij stacken ze voor je en hodlen ze voor altijd!
+  </p>
+</div>
+
+<div id="btcpay" class="form-group">
+  <input class="form-control" id="price" type="number"
+         [(ngModel)]="donationValue"
+         min="{{ MINIMUM_VALUE }}"
+         max="{{ MAXIMUM_VALUE }}}"
+         step="{{ MINIMUM_VALUE }}"/>
+  <select class="form-control" name="currency" [(ngModel)]="donationCurrency">
+    <option value="BTC">BTC</option>
+    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
+    <option value="EUR">EUR</option>
+  </select>
+  <input type="image" class="submit" src="assets/home/pay.svg" alt="Donate now!" (click)="donate()">
+</div>
