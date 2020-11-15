@@ -30,16 +30,24 @@
 </div>
 
 <div id="btcpay" class="form-group">
-  <input class="form-control" id="price" type="number"
-         [(ngModel)]="donationValue"
-         min="{{ MINIMUM_VALUE }}"
-         max="{{ MAXIMUM_VALUE }}}"
-         step="{{ MINIMUM_VALUE }}"/>
   <select class="form-control" name="currency" [(ngModel)]="donationCurrency">
     <option value="BTC">BTC</option>
     <option value="USD">USD</option>
     <option value="GBP">GBP</option>
     <option value="EUR">EUR</option>
   </select>
+  <div *ngIf="donationCurrency === 'BTC'; then bitcoin  else fiat"></div>
+  <ng-template #bitcoin>
+    <input class="form-control" type="number"
+           [(ngModel)]="donationValue"
+           step="{{ BTC_STEP_VALUE }}"
+           min="0"/>
+  </ng-template>
+  <ng-template #fiat>
+    <input class="form-control" type="number"
+           [(ngModel)]="donationValue"
+           step="{{ FIAT_STEP_VALUE }}"
+           min="0"/>
+  </ng-template>
   <input type="image" class="submit" src="assets/home/pay.svg" alt="Donate now!" (click)="donate()">
 </div>

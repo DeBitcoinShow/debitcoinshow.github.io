@@ -10,6 +10,8 @@
 }
 
 #btcpay input, select {
+  text-align: center;
+  text-align-last: center;
   display: flex;
   margin: auto;
   height: 40px;

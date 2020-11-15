@@ -13,21 +13,23 @@ export class HomeComponent implements OnInit{
   readonly NOTIFY_EMAIL = 'boris@debitcoinshow.nl';
 
   readonly DEFAULT_DONATION_CURRENCY = 'BTC';
-  readonly MINIMUM_VALUE = 0.00000001;
-  readonly MAXIMUM_VALUE = 21000000;
+  readonly BTC_STEP_VALUE = 0.00000001;
+  readonly FIAT_STEP_VALUE = 0.01;
 
   donationValue: number;
   donationCurrency: string;
 
   ngOnInit(): void {
-    this.donationValue = this.MINIMUM_VALUE;
     this.donationCurrency = this.DEFAULT_DONATION_CURRENCY;
+    this.donationValue = 0;
   }
 
-  // TODO HTTP post request and input validation
   donate(): void {
-    if (this.donationValue < this.MAXIMUM_VALUE && this.donationValue > this.MINIMUM_VALUE) {
-      console.log(this.STORE_ID, this.CHECKOUT_DESCRIPTION, this.ORDER_ID, this.NOTIFY_EMAIL, this.donationValue, this.donationCurrency);
+    if (this.donationCurrency === 'BTC' && this.donationValue > this.BTC_STEP_VALUE) {
+      // TODO HTTP post request
+    }
+    else if (this.donationValue > this.FIAT_STEP_VALUE) {
+      // TODO HTTP post request
     }
   }
 }
