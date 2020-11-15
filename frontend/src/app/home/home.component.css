@@ -1,19 +1,23 @@
-#introduction, #donate {
-  padding: 20px;
+#logo {
+  max-width: 50%;
+  margin: auto;
 }
 
 #logo img {
   margin: auto;
-  max-width: 600px;
-  max-height: 600px;
-  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-#btcpay input, select {
+#text h4 {
+  padding-top: 1em;
+}
+
+#btcpay input, #btcpay select {
   text-align: center;
   text-align-last: center;
   display: flex;
   margin: auto;
-  height: 40px;
-  width: 20%;
+  height: 3em;
+  width: 10em;
 }

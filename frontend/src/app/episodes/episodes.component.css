@@ -1,12 +1,7 @@
-#anchor {
-  margin: auto;
-  width: 50%;
-}
-
 #anchor iframe {
   width: 100%;
 }
 
 #favorites {
-  padding-top: 20px;
+  padding-top: 1em;
 }

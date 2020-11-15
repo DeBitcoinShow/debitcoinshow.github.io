@@ -2,7 +2,7 @@
   <img src="/assets/home/debitcoinshow.png" alt="logo not found">
 </div>
 
-<div id="introduction">
+<div id="text">
   <h4>
     Hooggeëerd publiek!
   </h4>
@@ -14,9 +14,6 @@
   <p>
     Licht uit, spot aan, dit is De Bitcoin Show!
   </p>
-</div>
-
-<div id="donate">
   <h4>
     Steun De Bitcoin Show met Lightning!
   </h4>
@@ -36,7 +33,7 @@
     <option value="GBP">GBP</option>
     <option value="EUR">EUR</option>
   </select>
-  <div *ngIf="donationCurrency === 'BTC'; then bitcoin  else fiat"></div>
+  <div *ngIf="donationCurrency === 'BTC'; then bitcoin else fiat"></div>
   <ng-template #bitcoin>
     <input class="form-control" type="number"
            [(ngModel)]="donationValue"

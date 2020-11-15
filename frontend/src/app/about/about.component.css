@@ -1,19 +1,16 @@
 .introduction {
-  width: 100%;
-  padding: 20px;
-  overflow: hidden;
+  padding-top: 3em;
 }
 
 .introduction img {
-  max-width: 175px;
-  max-height: 175px;
-  padding: 1px;
+  max-width: 10em;
+  max-height: 10em;
   border-radius: 50%;
   float: left;
-  margin-right: 15px;
+  margin-right: 1em;
 }
 
-.introduction h4, p {
-  display: block;
-  text-align: justify;
+.introduction .title {
+  display: inline-block;
+
 }
