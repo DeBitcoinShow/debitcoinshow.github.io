@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Prerequisites
 
+###### NodeJS & npm
+Install Node.js and npm from https://www.npmjs.com/get-npm
+
 ###### JQuery & Bootstrap 
 Run `npm install jquery bootstrap`
 
