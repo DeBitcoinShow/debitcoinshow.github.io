@@ -12,12 +12,15 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'episodes', component: EpisodesComponent},
   {path: 'events', component: EventsComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({
@@ -29,7 +32,8 @@ const routes: Routes = [
     EpisodesComponent,
     ContactComponent,
     SocialmediaComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

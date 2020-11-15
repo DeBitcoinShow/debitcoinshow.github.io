@@ -1,0 +1,19 @@
+.introduction {
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.introduction img {
+  max-width: 175px;
+  max-height: 175px;
+  padding: 1px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 15px;
+}
+
+.introduction h4, p {
+  display: block;
+  text-align: justify;
+}
