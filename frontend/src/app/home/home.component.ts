@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   readonly NOTIFY_EMAIL = 'boris@debitcoinshow.nl';
 
   /**
-   * minimal allowed values
+   * Minimal allowed values
    */
   readonly BTC_MIN_VALUE = 0.00000001;
   readonly FIAT_MIN_VALUE = 0.01;
@@ -49,6 +49,10 @@ export class HomeComponent implements OnInit {
     confirm(`Verifiëer dat je ${this.donationValue} ${this.donationCurrency} wilt doneren`);
   }
 
+  private incorrectInputPopup(): void {
+    alert(`Incorrecte invoer ontvangen: ${this.donationValue} ${this.donationCurrency}`);
+  }
+
   private sendDonationRequest(): any {
     this.dataService.post(this.BTCPAY_SERVER_URL, ({
       storeId: this.STORE_ID,
@@ -58,9 +62,5 @@ export class HomeComponent implements OnInit {
       currency: this.donationCurrency,
       price: this.donationValue
     }));
-  }
-
-  private incorrectInputPopup(): void {
-    alert(`Incorrecte invoer ontvangen: ${this.donationValue} ${this.donationCurrency}`);
   }
 }

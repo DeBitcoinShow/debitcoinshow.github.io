@@ -12,10 +12,10 @@ export class DataService {
     const observable = this.http.post(url, body);
     observable.subscribe(
       (val) => {
-          alert('POST request geslaagd!');
+          alert('Verzoek geslaagd!');
         },
         response => {
-          alert('POST request gefaald!');
+          alert('Verzoek mislukt!');
         });
   }
 }
