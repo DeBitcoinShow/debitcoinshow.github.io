@@ -5,5 +5,5 @@ p {
 
 .widget{
   background: url('assets/common/spinner.gif') no-repeat center;
-  background-size: 10em;
+  background-size: 2em;
 }
