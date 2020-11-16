@@ -6,11 +6,14 @@
   max-width: 10em;
   max-height: 10em;
   border-radius: 50%;
-  float: left;
-  margin-right: 1em;
+  display: block;
+  margin: auto;
 }
 
 .introduction .title {
-  display: inline-block;
+  text-align: center;
+}
 
+.introduction .socialMedia {
+  text-align: center;
 }
