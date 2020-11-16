@@ -1,0 +1,12 @@
+#btcpay {
+  padding-top: 1em;
+}
+
+#btcpay input, #btcpay select {
+  text-align: center;
+  text-align-last: center;
+  margin: 1em auto auto;
+  display: flex;
+  width: 17em;
+  height: 3em;
+}

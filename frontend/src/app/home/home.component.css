@@ -13,19 +13,4 @@
   padding-top: 1em;
 }
 
-#btcpay {
-  padding-top: 2em;
-}
 
-#btcpay input, #btcpay select {
-  text-align: center;
-  text-align-last: center;
-  display: flex;
-  margin: auto;
-  height: 2em;
-  width: 10em;
-}
-
-#btcpay input[type=image] {
-  height: 3em;
-}

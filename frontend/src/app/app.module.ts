@@ -14,12 +14,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { DonateComponent } from './donate/donate.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'episodes', component: EpisodesComponent},
   {path: 'events', component: EventsComponent},
+  {path: 'donate', component: DonateComponent},
   {path: 'contact', component: ContactComponent},
   {path: '**', component: HomeComponent}
 ];
@@ -34,7 +36,8 @@ const routes: Routes = [
     ContactComponent,
     SocialmediaComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,

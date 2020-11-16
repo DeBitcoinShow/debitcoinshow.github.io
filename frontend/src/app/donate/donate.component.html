@@ -1,0 +1,33 @@
+<h4>
+  Steun De Bitcoin Show met Lightning!
+</h4>
+<p>
+  We hebben onze eigen BTCPay Server geinstalleerd om zonder tussenkomst van derden jullie zuur verdiende Satoshi's in
+  ontvangst te nemen. We accepteren voor nu alleen lightning. Kom in de Telegram-groep als je hulp nodig hebt!
+</p>
+<p>
+  Dus kun je een paar sats missen? Wij stacken ze voor je en hodlen ze voor altijd!
+</p>
+
+<div id="btcpay" class="form-group">
+  <select class="form-control" name="currency" [(ngModel)]="donationCurrency">
+    <option value="BTC">BTC</option>
+    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
+    <option value="EUR">EUR</option>
+  </select>
+  <div *ngIf="donationCurrency === 'BTC'; then bitcoin else fiat"></div>
+  <ng-template #bitcoin>
+    <input class="form-control" type="number"
+           [(ngModel)]="donationValue"
+           step="{{ BTC_MIN_VALUE }}"
+           min="0"/>
+  </ng-template>
+  <ng-template #fiat>
+    <input class="form-control" type="number"
+           [(ngModel)]="donationValue"
+           step="{{ FIAT_MIN_VALUE }}"
+           min="0"/>
+  </ng-template>
+  <input type="image" class="submit" src="assets/home/pay.svg" alt="Donate now!" (click)="donate()">
+</div>
