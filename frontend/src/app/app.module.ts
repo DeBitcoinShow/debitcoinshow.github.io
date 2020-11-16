@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
     CommonModule

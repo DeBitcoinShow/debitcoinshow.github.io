@@ -37,13 +37,13 @@
   <ng-template #bitcoin>
     <input class="form-control" type="number"
            [(ngModel)]="donationValue"
-           step="{{ BTC_STEP_VALUE }}"
+           step="{{ BTC_MIN_VALUE }}"
            min="0"/>
   </ng-template>
   <ng-template #fiat>
     <input class="form-control" type="number"
            [(ngModel)]="donationValue"
-           step="{{ FIAT_STEP_VALUE }}"
+           step="{{ FIAT_MIN_VALUE }}"
            min="0"/>
   </ng-template>
   <input type="image" class="submit" src="assets/home/pay.svg" alt="Donate now!" (click)="donate()">
