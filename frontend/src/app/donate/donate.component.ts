@@ -38,23 +38,26 @@ export class DonateComponent implements OnInit {
   }
 
   donate(): void {
-    if ((this.donationCurrency === 'BTC' && this.donationValue >= this.BTC_MIN_VALUE) || this.donationValue >= this.FIAT_MIN_VALUE) {
-      this.verifyDonationPopup();
-      this.sendDonationRequest();
-    } else {
-      this.incorrectInputPopup();
+    if (!this.userInputValid()) {
+      this.invalidInputPopup();
+    } else if (this.userVerifiedDonation()) {
+      this.sendDonation();
     }
   }
 
-  private verifyDonationPopup(): void {
-    confirm(`Verifiëer dat je ${this.donationValue} ${this.donationCurrency} wilt doneren`);
+  private userInputValid(): boolean {
+    return (this.donationCurrency === 'BTC' && this.donationValue >= this.BTC_MIN_VALUE) || this.donationValue >= this.FIAT_MIN_VALUE;
   }
 
-  private incorrectInputPopup(): void {
+  private invalidInputPopup(): void {
     alert(`Incorrecte invoer ontvangen: ${this.donationValue} ${this.donationCurrency}`);
   }
 
-  private sendDonationRequest(): any {
+  private userVerifiedDonation(): boolean {
+     return confirm(`Verifiëer dat je ${this.donationValue} ${this.donationCurrency} wilt doneren`);
+  }
+
+  private sendDonation(): any {
     this.dataService.post(this.BTCPAY_SERVER_URL, ({
       storeId: this.STORE_ID,
       checkoutDesc: this.CHECKOUT_DESCRIPTION,
