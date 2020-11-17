@@ -10,3 +10,7 @@
   width: 17em;
   height: 3em;
 }
+
+#btcpay input[type=image] {
+  height: 4em;
+}
