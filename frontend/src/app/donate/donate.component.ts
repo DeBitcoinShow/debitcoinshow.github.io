@@ -1,70 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-donate',
   templateUrl: './donate.component.html',
   styleUrls: ['./donate.component.css']
 })
-export class DonateComponent implements OnInit {
-  /**
-   * BTC Pay server values
-   */
-  readonly BTCPAY_SERVER_URL = 'http://pay.gamekings.tv:49392/api/v1/invoices';
-  readonly STORE_ID = 'Dmy3sBstnR6HacuxdZHpwE5hufcaoeBeEjne32SfcUqA';
-  readonly CHECKOUT_DESCRIPTION = 'Support de Bitcoin Show';
-  readonly ORDER_ID = 'Donatie DBS';
-  readonly NOTIFY_EMAIL = 'boris@debitcoinshow.nl';
+export class DonateComponent {
+  readonly BITCOIN_ADDRESS = 'Bitcoin adres';
+  readonly BANK_NUMBER = 'Rekeningnummer';
 
-  /**
-   * Minimal allowed values
-   */
-  readonly BTC_MIN_VALUE = 0.00000001;
-  readonly FIAT_MIN_VALUE = 0.01;
-
-  /**
-   * User input values
-   */
-  donationCurrency: string;
-  donationValue: number;
-
-  constructor(private dataService: DataService) {
+  // Search online for more information
+  getBitcoinQrCodeString(): string {
+    return 'bitcoin' +                // Currency
+           ':' +                      // Colon
+           this.BITCOIN_ADDRESS;      // Recipient
   }
 
-  ngOnInit(): void {
-    this.donationCurrency = 'BTC';
-    this.donationValue = 0;
-  }
-
-  donate(): void {
-    if (!this.userInputValid()) {
-      this.invalidInputPopup();
-    } else if (this.userVerifiedDonation()) {
-      this.sendDonation();
-    }
-  }
-
-  private userInputValid(): boolean {
-    return (this.donationCurrency === 'BTC' && this.donationValue >= this.BTC_MIN_VALUE) || this.donationValue >= this.FIAT_MIN_VALUE;
-  }
-
-  private invalidInputPopup(): void {
-    alert(`Incorrecte invoer ontvangen: ${this.donationValue} ${this.donationCurrency}`);
-  }
-
-  private userVerifiedDonation(): boolean {
-     return confirm(`Verifiëer dat je ${this.donationValue} ${this.donationCurrency} wilt doneren`);
-  }
-
-  private sendDonation(): any {
-    this.dataService.post(this.BTCPAY_SERVER_URL, ({
-      storeId: this.STORE_ID,
-      checkoutDesc: this.CHECKOUT_DESCRIPTION,
-      notifyEmail: this.NOTIFY_EMAIL,
-      orderId: this.ORDER_ID,
-      currency: this.donationCurrency,
-      price: this.donationValue
-    }));
+  // Refer to https://epc-qr.eu/ for more information
+  getBankQrCodeString(): string {
+  return 'BCD\n' +                    // Service tag
+         '002\n' +                    // Version
+         '1\n' +                      // Character set
+         'SCT\n' +                    // Identification
+         '\n' +                       // BIC
+         'DBS\n' +                    // Name
+         this.BANK_NUMBER + '\n' +    // IBAN
+         '\n' +                       // Amount
+         '\n' +                       // Reference
+         'Donatie DBS';               // Information
   }
 }

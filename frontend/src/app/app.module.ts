@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DonateComponent } from './donate/donate.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -37,14 +39,16 @@ const routes: Routes = [
     SocialmediaComponent,
     FooterComponent,
     AboutComponent,
-    DonateComponent
+    DonateComponent,
+    QrcodeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    CommonModule
+    CommonModule,
+    NgxQRCodeModule
   ],
   exports: [
     [RouterModule]

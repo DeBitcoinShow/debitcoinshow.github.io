@@ -1,0 +1,9 @@
+#qrBox {
+  text-align: center;
+}
+
+#qrBox #copyValue {
+  max-height: 2em;
+  padding: 3px;
+  transform: translateY(25%);
+}
