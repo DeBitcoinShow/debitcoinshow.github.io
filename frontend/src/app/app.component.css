@@ -1,3 +1,7 @@
+#content {
+  min-height: calc(100vh - 8em);
+}
+
 #routerOutlet {
   padding: 1em;
   max-width: 40em;
@@ -7,5 +11,4 @@
 #footer {
   position: relative;
   text-align: center;
-  padding: 1em;
 }
