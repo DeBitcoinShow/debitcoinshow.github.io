@@ -5,5 +5,13 @@
   <app-socialmedia [image]="'assets/socialmedia/youtube.png'" [link]="'https://www.youtube.com/channel/UCP-WQVY-xo2bvOIiN9Q-qig/'"></app-socialmedia>
   <app-socialmedia [image]="'assets/socialmedia/rss.png'" [link]="'https://anchor.fm/s/da403dc/podcast/rss/'"></app-socialmedia>
   <app-socialmedia [image]="'assets/socialmedia/github.png'" [link]="'https://github.com/DeBitcoinShow/debitcoinshow.github.io'"></app-socialmedia>
-  <h6>©De Bitcoin Show {{ getYear() }}. Alle rechten voorbehouden.</h6>
+  <div id="sponsor">
+    <label for="sponsor"><small>Mede mogelijk gemaakt door</small></label>
+    <a href="https://bitonic.nl/" target="_blank">
+      <img src="assets/footer/bitonic.png" alt="Bitonic">
+    </a>
+  </div>
+  <div id="disclaimer">
+    <p><small>©De Bitcoin Show {{ getYear() }}. Alle rechten voorbehouden.</small></p>
+  </div>
 </footer>

@@ -1,0 +1,13 @@
+#sponsor, #disclaimer {
+  max-height: 1em;
+}
+
+#sponsor img {
+  max-height: 1em;
+  max-width: 6em;
+  padding-left: 5px;
+}
+
+#disclaimer p {
+  text-align: center;
+}
