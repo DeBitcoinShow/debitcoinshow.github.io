@@ -23,4 +23,4 @@ Run `cd frontend`
 Run `ng build --prod --base-href "https://{GithubUserName}.github.io/debitcoinshow.github.io/"` 
 
 ###### Deploy
-Run `npx angular-cli-ghpages —dir=dist/frontend`
+Run `npx angular-cli-ghpages —dir=dist/frontend/`
