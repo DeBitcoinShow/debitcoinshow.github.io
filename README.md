@@ -23,4 +23,11 @@ Run `cd frontend`
 Run `ng build --prod --base-href "https://{GithubUserName}.github.io/debitcoinshow.github.io/"` 
 
 ###### Deploy
-Run `npx angular-cli-ghpages —dir=dist/frontend/`
+Run `npx ngh angular-cli-ghpages`
+
+###### Visit site
+Your site should now be deployed at `https://{GithubUserName}.github.io/debitcoinshow.github.io/`
+
+### Troubleshooting
+###### Verify repository settings
+Verify in the repository settings that the GitHub Pages source is `branch: gh-pages` and `/(root)`
