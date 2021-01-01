@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_rebase_[Default_Changelist]1" date="1606426918223" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="frontend/src/assets/donate/euro.png" />
+    <option name="AFTER_PATH" value="frontend/src/assets/donate/euro.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]1/euro.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="frontend/src/assets/donate/bitcoin.png" />
+    <option name="AFTER_PATH" value="frontend/src/assets/donate/bitcoin.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]1/bitcoin.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="frontend/src/assets/donate/lightning.png" />
+    <option name="AFTER_PATH" value="frontend/src/assets/donate/lightning.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]1/lightning.png" />
+  </binary>
+</changelist>

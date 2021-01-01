@@ -1,0 +1,9 @@
+<div id="qrBox">
+  <ngx-qrcode value="{{ qrValue }}" errorCorrectionLevel="L" ></ngx-qrcode>
+  <label>
+    <input type="text" value="{{ textValue }}" #input readonly>
+  </label>
+  <label>
+    <input id="copyValue" type="image" src="assets/common/clipboard.png" alt="Copy" (click)="copyToClipboard(input)"/>
+  </label>
+</div>

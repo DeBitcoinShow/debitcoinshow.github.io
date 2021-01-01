@@ -1,0 +1,16 @@
+.introduction img {
+  max-width: 10em;
+  max-height: 10em;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  border: 1px solid #070936;
+}
+
+.introduction .title {
+  text-align: center;
+}
+
+.introduction .socialMedia {
+  text-align: right;
+}

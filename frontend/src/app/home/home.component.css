@@ -1,0 +1,39 @@
+#logo {
+  max-width: 100%;
+  margin: auto;
+}
+
+#logo img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#introduction h3, #donation h5 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#donation {
+  padding-top: 1em;
+  margin: auto;
+  text-align: center;
+}
+
+.donationBanner {
+  padding: 10px;
+  display: inline;
+  margin: auto;
+}
+
+.donationBanner input {
+  border-radius: 20px;
+  border: 2px solid #070936;
+  max-height: 2.5em;
+  max-width: 2.5em;
+  width: 6em;
+  margin: auto;
+}
+
+
+

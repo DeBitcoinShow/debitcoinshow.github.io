@@ -1,0 +1,39 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: #070936;
+}
+
+.navbar-toggler {
+  background: url("../../assets/navbar/hamburger.png") no-repeat center;
+  background-size: 1.5em;
+}
+
+.inactive-link {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.inactive-link:hover {
+  color: lightgray;
+}
+
+.active-link, .active-link:hover {
+  color: #e69703;
+  border-bottom: 1px solid #e69703;
+}
+
+#socialMedia, #shareIcon {
+  top: 0.75em;
+  right: 1.5em;
+  z-index: 101;
+  position: fixed;
+  cursor: pointer;
+}
+
+#shareIcon  {
+  max-width: 2em;
+  max-height: 2em;
+}

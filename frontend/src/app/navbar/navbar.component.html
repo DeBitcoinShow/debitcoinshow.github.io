@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': isNavbarOpen() }">
+    <ul class="navbar-nav mr-auto">
+      <li class="inactive-link" routerLink="/home" routerLinkActive="active-link" (click)="closeAllBars()">Home</li>
+      <li class="inactive-link" routerLink="/about" routerLinkActive="active-link" (click)="closeAllBars()">Over ons</li>
+      <li class="inactive-link" routerLink="/episodes" routerLinkActive="active-link" (click)="closeAllBars()">Afleveringen</li>
+      <li class="inactive-link" routerLink="/events" routerLinkActive="active-link" (click)="closeAllBars()">Evenementen</li>
+    </ul>
+  </div>
+</nav>
+<div id="socialMedia">
+  <div *ngIf="!isSocialBarOpen()">
+    <img id="shareIcon" src="assets/navbar/share.png" alt="Share" (click)="toggleSocialBar()">
+  </div>
+  <div *ngIf="isSocialBarOpen()">
+    <app-socialmedia [image]="'assets/navbar/twitter.png'" [link]="'https://twitter.com/debitcoinshow/'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/reddit.png'" [link]="'https://www.reddit.com/r/debitcoinshow/'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/telegram.png'" [link]="'https://telegram.im/@debitcoinshow/'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/youtube.png'" [link]="'https://www.youtube.com/channel/UCP-WQVY-xo2bvOIiN9Q-qig/'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/rss.png'" [link]="'https://anchor.fm/s/da403dc/podcast/rss/'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/github.png'" [link]="'https://github.com/DeBitcoinShow/debitcoinshow.github.io'"></app-socialmedia>
+    <app-socialmedia [image]="'assets/navbar/email.png'" [link]="'mailto:hello@debitcoinshow.nl'"></app-socialmedia>
+  </div>
+</div>
