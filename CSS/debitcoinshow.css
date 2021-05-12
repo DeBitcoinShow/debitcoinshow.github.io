@@ -20,7 +20,7 @@ html {
 
 #Logo {
     display: block;
-    margin: 1rem auto 0px auto;
+    margin: 0 auto 0px auto;
     width: 80vw;
     max-width: 693px;
 }
@@ -108,20 +108,20 @@ footer p {
 
 
 @media screen and (max-width:1200px) {
-    
+
     html {
         font-size:calc(1.41vw + 8px);
     }
 }
 
 @media screen and (max-width:600px) {
-    
+
     #Social_media {
         flex-direction: column;
         width: 100%;
         margin: 1.4rem auto 4.5rem auto;
     }
-    
+
     #Social_media a {
         display: block;
         margin-bottom: 1.5rem;
@@ -176,4 +176,41 @@ a:active { color:#004eff }
 a.hidden {
   color: black;
   text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --dbs-spot: #0185ff;
+    --dbs-shade: #8d4002;
+  }
+
+  body {
+    color: #e0e0e0;
+    background-color: #161616;
+  }
+
+  a.hidden {
+    color: inherit;
+  }
+
+  a:link {
+    color: var(--dbs-spot);
+  }
+
+  iframe[src^="https://anchor.fm"] {
+    border: 1px solid  var(--dbs-spot);
+    background-color: var(--dbs-spot);
+    border-radius: 5px;
+  }
+
+  [class^="socicon-"] {
+    color: inherit !important;
+  }
+
+  footer {
+    color: #fff;
+    background-color: var(--dbs-shade);
+  }
+
 }
