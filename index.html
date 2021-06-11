@@ -70,6 +70,23 @@
       <div class="Aflevering">
         <iframe src="https://anchor.fm/debitcoinshow/embed" height="102px" width="330px" frameborder="0" scrolling="no"></iframe>
       </div>
+    <script>
+    (function() {
+      var btcTVjson = "https://bitcointv.com/feeds/videos.json?videoChannelId=38";
+      $.getJSON( btcTVjson, {})
+        .done(function( data ) {
+          $.each( data.items, function( i,item) {
+            $("iframe.btcTViframe").attr( "src",item.id.replace('watch', 'embed'))         
+            if ( i === 0 ) {
+              return false;
+            }
+        
+          });
+        });
+    })();
+</script>
+De meest recente aflevering op BitcoinTV.com:
+<iframe class="btcTViframe" width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="" frameborder="0" allowfullscreen></iframe>
   </section>
 
 
