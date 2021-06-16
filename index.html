@@ -32,7 +32,7 @@
   <meta name="twitter:url" content="https://www.debitcoinshow.nl">
   <meta name="twitter:image" content="https://www.debitcoinshow.nl/Images/Logo_De_Bitcoin_Show.png">
   
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="JS/jquery-3.4.1.min.js"></script>
 
 </head>
 
@@ -74,10 +74,11 @@
       </div>
 
 De meest recente aflevering op BitcoinTV.com:<br>
-<iframe class="btcTViframe" width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="" frameborder="0" allowfullscreen></iframe>
+      <div class="Aflevering">
+        <iframe class="btcTViframe" width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
   </section>
-
-
   <section class="Section" id="Donaties">
     <a href="#Donaties" class="hidden"><h1 class="Section_heading">Steun De Bitcoin Show met Lightning!</h1></a>
     <p class="Section_paragraph">We hebben onze eigen BTCPay Server geinstalleerd om zonder tussenkomst van derden jullie zuur verdiende Satoshi's in ontvangst te nemen. <strong>We accepteren voor nu alleen lightning</strong>. Kom in de Telegram-groep als je hulp nodig hebt!</p>
@@ -180,20 +181,6 @@ De meest recente aflevering op BitcoinTV.com:<br>
   </footer>
 
 
-
-
-</body>
-
-<script type='text/javascript'>
-// Site/local javascript
-if ( window.location.href == "https://debitcoinshow.github.io/" ) {
-  $("#env").html("GitHub env")
-}
-if ( window.location.href.substring(0,4) == "file" ) {
-  $("#env").html("Local dev env")
-}
-
-</script>
 <script type='text/javascript'>
     (function() {
       var btcTVjson = "https://bitcointv.com/feeds/videos.json?videoChannelId=38";
@@ -209,5 +196,19 @@ if ( window.location.href.substring(0,4) == "file" ) {
         });
     })();
 </script>
+
+</body>
+
+<script type='text/javascript'>
+// Site/local javascript
+if ( window.location.href == "https://debitcoinshow.github.io/" ) {
+  $("#env").html("GitHub env")
+}
+if ( window.location.href.substring(0,4) == "file" ) {
+  $("#env").html("Local dev env")
+}
+
+</script>
+
 
 </html>
