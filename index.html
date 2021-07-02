@@ -74,43 +74,12 @@
         <iframe src="https://anchor.fm/debitcoinshow/embed" height="102px" width="330px" frameborder="0" scrolling="no"></iframe>
       </div>
 
-De meest recente aflevering op BitcoinTV.com:<br>
+      <p class="Section_Paragraph">De meest recente aflevering op BitcoinTV.com</p>
       <div class="Aflevering">
         <iframe style="max-width:100%" class="btcTViframe" width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
+      </div>
 
-  </section>
-  <section class="Section" id="Donaties">
-    <a href="#Donaties" class="hidden"><h1 class="Section_heading">Steun De Bitcoin Show met Lightning!</h1></a>
-    <p class="Section_paragraph">We hebben onze eigen BTCPay Server geinstalleerd om zonder tussenkomst van derden jullie zuur verdiende Satoshi's in ontvangst te nemen. <strong>We accepteren voor nu alleen lightning</strong>. Kom in de Telegram-groep als je hulp nodig hebt!</p>
-    <p class="Section_paragraph">Dus kun je een paar sats missen? Wij stacken ze voor je en hodlen ze voor altijd!</p>
-    <div id="BTCPay">
-      <style type="text/css"> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } #btcpay-input-price { -moz-appearance: none; -webkit-appearance: none; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; } </style>
-      <form method="POST" action="http://pay.gamekings.tv:49392/api/v1/invoices" class="btcpay-form btcpay-form--block">
-        <input type="hidden" name="storeId" value="Dmy3sBstnR6HacuxdZHpwE5hufcaoeBeEjne32SfcUqA" />
-        <input type="hidden" name="checkoutDesc" value="Support de Bitcoin Show" />
-        <input type="hidden" name="orderId" value="Donatie DBS" />
-        <input type="hidden" name="notifyEmail" value="boris@debitcoinshow.nl" />
-        <div>
-          <div class="btcpay-custom">
-            <button class="plus-minus" onclick="event.preventDefault(); var price = parseInt(document.querySelector('#btcpay-input-price').value); if ('-' == '-' && (price - 1) < 1) { return; } document.querySelector('#btcpay-input-price').value = parseInt(document.querySelector('#btcpay-input-price').value) - 1;">-</button>
-            <input id="btcpay-input-price" name="price" type="text" min="1" max="20" step="1" value="0.0001" style="width: 3em;" oninput="event.preventDefault();isNaN(event.target.value) || event.target.value <= 0 ? document.querySelector('#btcpay-input-price').value = 0.0001 : event.target.value"  />
-            <button class="plus-minus" onclick="event.preventDefault(); var price = parseInt(document.querySelector('#btcpay-input-price').value); if ('+' == '-' && (price - 1) < 1) { return; } document.querySelector('#btcpay-input-price').value = parseInt(document.querySelector('#btcpay-input-price').value) + 1;">+</button>
-          </div>
-          <select name="currency">
-            <option value="USD">USD</option>
-            <option value="GBP">GBP</option>
-            <option value="EUR">EUR</option>
-            <option value="BTC" selected>BTC</option>
-          </select>
-        </div>
-        <input type="image" class="submit" name="submit" src="Images/pay.svg" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
-      </form>
-    </div>
-    <p class="Section_paragraph">(Je krijgt waarschijnlijk een melding over een onbeveiligde verbinding, omdat de btcpayserver nog geen HTTPS ondersteunt.)</p>
-  </section>
-
-  <section class="Section" id="De_Bitcoin_meetup">
+ <section class="Section" id="De_Bitcoin_meetup">
     <a href="#De_Bitcoin_meetup" class="hidden"><h1 class="Section_heading">De Bitcoin Meetup</h1></a>
     <p class="Section_paragraph">Om de maand organiseren wij <strong>De Bitcoin Meetup</strong> bij <a href="https://blastgalaxy.nl">Blast Galaxy</a> in Amsterdam. Lekker gamen en chicken wings eten met de gezelligste Bitcoiners van Nederland!</p>
     <p class="Section_paragraph">Entree is <strong>5 euro</strong>, te betalen aan de deur met Bitcoin. Binnen kun je voor consumpties zowel pinnen als met Bitcoin betalen. Met Bitcoin worden zowel base layer als lightning betalingen geaccepteerd.</p>
