@@ -33,13 +33,14 @@
   <meta name="twitter:image" content="https://www.debitcoinshow.nl/Images/Logo_De_Bitcoin_Show.png">
   
   <script src="JS/jquery-3.4.1.min.js"></script>
+  <script src="JS/custom.js"></script>
 
 </head>
 
 
 
 
-<body>
+<body onload="initialize()">
   <!-- Fork Label -->
   <div class="forkme"><a href="https://github.com/DeBitcoinShow/debitcoinshow.github.io"><p class="socicon-github" style="color:#221e1b">&#xe032;</p> Help mee op Github</a></div>
 
@@ -145,34 +146,7 @@
   </footer>
 
 
-<script type='text/javascript'>
-    (function() {
-      var btcTVjson = "https://bitcointv.com/feeds/videos.json?videoChannelId=38";
-      $.getJSON( btcTVjson, {})
-        .done(function( data ) {
-          $.each( data.items, function( i,item) {
-            $("iframe.btcTViframe").attr( "src",item.id.replace('watch', 'embed'))         
-            if ( i === 0 ) {
-              return false;
-            }
-        
-          });
-        });
-    })();
-</script>
-
 </body>
-
-<script type='text/javascript'>
-// Site/local javascript
-if ( window.location.href == "https://debitcoinshow.github.io/" ) {
-  $("#env").html("GitHub env")
-}
-if ( window.location.href.substring(0,4) == "file" ) {
-  $("#env").html("Local dev env")
-}
-
-</script>
 
 
 </html>
