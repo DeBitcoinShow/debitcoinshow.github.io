@@ -123,8 +123,8 @@ footer p {
     }
 
     #Social_media a {
-        display: block;
-        margin-bottom: 1.5rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
     }
 }
 
